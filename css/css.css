@@ -1,0 +1,119 @@
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+	background:#fff;
+}
+body a{
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+ ul{
+	padding: 0;
+	margin: 0;
+	
+}
+h1,h2,h3,h4,h5,h6,p,label{
+	margin:0;
+}
+/*第一页背景*/
+.header{
+	background: #78D9E2 no-repeat bottom;
+	width:100%;
+	min-height: 750px;
+	display: block;
+	background-size: cover;
+	position:relative;
+}
+.header:after {
+    content: '';
+    background: url(../images/1.png) repeat 0px 0px;
+    display: block;
+    height: 31px;
+    width: 100%;
+    bottom: 0%;
+    position: absolute;
+}
+/*导航栏部分*/
+nav a{
+	position: absolute;
+	display: block;
+	text-decoration: none;
+	font-weight: bolder;
+	color: #fff;
+	font-size: 1.5em;
+	top:2%;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    vertical-align: middle;
+}
+nav a:hover{
+	color: rgba(0,0,0,0.2);
+	text-shadow: none;
+}
+#logo{
+	font-size: 4em;
+	text-align: center;
+	font-weight: bolder;
+	color: #fff;
+	padding-top:2%;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    vertical-align: middle;
+}
+#nav1{
+	left: 100px;
+}
+#nav2{
+	left: 20%;
+}
+#nav3{
+	left: 30%;
+}
+#nav4{
+	left: 70%;
+}
+#nav5{
+	left: 80%;
+}
+#nav6{
+	right: 100px;
+}
+/*幻灯片部分*/
+.slidebox{
+	background: pink;
+	position: absolute;
+	top: 30%;
+	left: 20%;
+	width: 60%;
+	height: 50%;
+	
+}
+/*About*/
+.about{
+	background: pink;
+	height: 1000px;
+}
+/*Support*/
+.support{
+	background: blue;
+	height: 1000px;
+}
+/*back*/
+#back{
+	background: #fff;
+	position: fixed;
+	right: 30px;
+	bottom: 45px;
+	border-radius: 30px;
+	width: 60px;
+	height: 60px;
+	text-align: center; 
+	opacity: 0.6;
+}
+#back:hover{
+	opacity: 1;
+}
+#back img{
+	margin-top:15px; 
+}
+/*back over*/
