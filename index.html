@@ -2,69 +2,99 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />  
-	<!--[if lt IE 9]>  
-　　　　<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>  
-<![endif]-->  
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no" />  
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
 	<title>123456</title>
-
-
-	<!-- 自动探测屏幕宽度，然后加载相应的CSS文件 -->
-	<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 400px)" href="tinyScreen.css" />
-	<!-- 如果屏幕宽度小于400像素（max-device-width: 400px），就加载tinyScreen.css文件 -->
-	<link rel="stylesheet" type="text/css" media="screen and (min-width: 400px) and (max-device-width: 600px)" href="smallScreen.css" />
-	<style type="text/css">
-		/*在现有CSS文件中加载*/
-		@import url("tinyScreen.css") screen and (max-device-width: 400px);
-		/*如果屏幕宽度小于400像素，则column块取消浮动（float:none）、宽度自动调节（width:auto），sidebar块不显示（display:none）*/
-		@media screen and (max-device-width: 1000px) {
-			.column {
-			float: none;
-			width:auto;
-			}
-			 
-			.sidebar {
-			display:none;
-			}
-		}
-	</style>
-
 	<link href="css/css.css" rel="stylesheet" type="text/css" media="all" />	
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
 
 </head>
 <body>
-	<!-- header -->
-	<div class="header" id="header">
-		<!-- 导航栏部分 -->
-		<nav>
+	<div id="fullpage">
+		<!-- header -->
+		<div class="section header" id="header">
+			<!-- 导航栏部分 -->
+			<nav id="nav">
+				<ul >
+					<li><a href="#page2" class="toptip toptip-1">Product
+						<span class="toptip-content"><i class="fa fa-trophy fa-fw"></i></span>
+					</a></li>
+					<li><a href="#page3" class="toptip toptip-2">About
+						<span class="toptip-content"><i class="fa fa-users fa-fw"></i></span>
+					</a></li>
+					<li><a href="#page4" class="toptip toptip-3">Store
+						<span class="toptip-content"><i class="fa fa-gift fa-fw"></i></span>
+					</a></li>
+					<li><a href="#page5" class="toptip toptip-4">Support
+						<span class="toptip-content"><i class="fa fa-cogs fa-fw"></i></span>
+					</a></li>
+					<li><a href="" class="toptip toptip-5">Blog
+						<span class="toptip-content"><i class="fa fa-pencil-square-o fa-fw"></i></span>
+					</a></li>
+					<li><a href="" class="toptip toptip-6">English
+						<span class="toptip-content"><i class="fa fa-anchor fa-fw"></i></span>
+					</a></li>
+				</ul>
+				<!-- back -->
+				<div id="back"><a href="#page1"><img src="images/arrow1.png"></a></div>
+				<!-- back over -->
+			</nav>
+			<!-- 幻灯片部分 -->
 			<div id="logo">星辰<br>Studio</div>
-			<a href="" id="nav1">Product</a>
-			<a href="#about" id="nav2">About</a>
-			<a href="" id="nav3">Store</a>
-			<a href="#support" id="nav4">Support</a>
-			<a href="" id="nav5">Blog</a>
-			<a href="" id="nav6">English</a>
-		</nav>
-		<!-- 幻灯片部分 -->
-		<div class="slidebox">12345</div>
-	</div>
-	<!-- header Over -->
-	<!-- About -->
-	<div class="about">
-		12345About
-		<a name="about">111</a>
-	</div>
-	<!-- About Over -->
-	<!-- Support -->
-	<div class="support">
-		12345Support
-		<a name="support">111</a>
-	</div>
-	<!-- Support Over -->
-	<!-- back -->
-	<div id="back1" style="position:absolute;top:0;"></div>
-	<div id="back"><a href="#back1"><img src="images/arrow1.png"></a></div>
-	<!-- back over -->
+			<div class="slidebox">12345</div>
+		</div>
+		<!-- header Over -->
+		<!-- product -->
+		<div class="section product" id="product">
+			
+			<div class="slide">Slide1</div>
+			<div class="slide">Slide2</div>
+			<div class="slide">Slide3</div>
+			<div class="slide">Slide4</div>
+		</div>
+		<!-- product over -->
+		<!-- About -->
+		<div class="section about" id="about">
+			12345About
 	
+		</div>
+		<!-- About Over -->
+		<!-- store -->
+		<div class="section store" id="store">
+			12345store
+	
+		</div>
+		<!-- store over -->
+		<!-- Support -->
+		<div class="section support" id="support">
+			12345Support
+			
+		</div>
+		<!-- Support Over -->
+
+		<script type="text/javascript" src="js/basic.js"></script>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.js"></script>
+
+	<script type="text/javascript" src="js/easing.js"></script>
+		<!-- 激活fullpage -->
+	<script >
+	$(document).ready(function(){
+		$('#fullpage').fullpage({
+			anchors:['page1','page2','page3','page4','page5'],
+			paddingTop:'100px',
+			fixedElements:'#nav',
+			navigation:'true',
+			navigationPosition:'right',
+			navigationColor:'#fff',
+			navigationTooltips:['Home','Product','About','Store','Support'],
+		});
+	});
+	</script>
 </body>
 </html>

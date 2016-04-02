@@ -1,22 +1,40 @@
+html{
+	width: 100%;
+	height: 100%;
+	-webkit-text-size-adjust:none;
+	-moz-text-size-adjust:none;
+	-ms-text-size-adjust:none;
+	-o-text-size-adjust:none;
+	text-size-adjust:none;
+}
 body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
 	font-family: 'Source Sans Pro', sans-serif;
 	background:#fff;
-}
-body a{
-	transition: 0.5s all;
-	-webkit-transition: 0.5s all;
-	-o-transition: 0.5s all;
-	-moz-transition: 0.5s all;
-	-ms-transition: 0.5s all;
 }
  ul{
 	padding: 0;
 	margin: 0;
-	
+	list-style: none;
 }
 h1,h2,h3,h4,h5,h6,p,label{
 	margin:0;
 }
+*,*:after,*:before{
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+}
+*:after,*:before{
+	display: block;
+	content: "";
+}
+*:after{clear: both;}
 /*第一页背景*/
 .header{
 	background: #78D9E2 no-repeat bottom;
@@ -36,48 +54,111 @@ h1,h2,h3,h4,h5,h6,p,label{
     position: absolute;
 }
 /*导航栏部分*/
+nav{
+	position: fixed;
+	left:5%;
+	top: 2%; 
+}
+nav li{
+	display: inline-block;
+	margin: 0 4em;
+}
+.toptip{
+	display: inline-block;
+	font-weight: 700;
+	position: relative;
+	z-index: 999;
+}
 nav a{
-	position: absolute;
-	display: block;
-	text-decoration: none;
-	font-weight: bolder;
-	color: #fff;
+	color: rgba(0,0,0,0.4);
 	font-size: 1.5em;
-	top:2%;
     text-shadow: 0 0 1px rgba(255,255,255,0.3);
     vertical-align: middle;
+    transition: 0.6s all;
+	-webkit-transition: 0.6s all;
+	-o-transition: 0.6s all;
+	-moz-transition: 0.6s all;
+	-ms-transition: 0.6s all;
+	text-decoration: none;
+	outline: none;
+}
+a:link,a:visited,a:focus{
+	text-decoration: none;
+	outline: none;
 }
 nav a:hover{
-	color: rgba(0,0,0,0.2);
+	color: #fff;
 	text-shadow: none;
 }
 #logo{
+	position: absolute;
 	font-size: 4em;
+	top: 0;
 	text-align: center;
 	font-weight: bolder;
 	color: #fff;
-	padding-top:2%;
     text-shadow: 0 0 1px rgba(255,255,255,0.3);
-    vertical-align: middle;
 }
-#nav1{
-	left: 100px;
+.toptip-content{
+	color: #78D9E2;
+	position: absolute;
+	z-index: 9999;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: #fff;
+	left: 50%;
+	margin-left:-40px;
+	top: 100%; 
+	margin-top: 10px;
+	text-align: center;
+	padding-top: 25px;
 }
-#nav2{
-	left: 20%;
+.toptip-content::after{
+	display: block;
+	content: "";
+	width: 30px;
+	height: 20px;
+	background: url(../images/toptip1.svg) no-repeat center center;
+	background-size: 100%;
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin:0 0 -7px -15px; 
 }
-#nav3{
-	left: 30%;
+.toptip .toptip-content{
+	transform: translate3d(0,0,0) rotate3d(1,1,1,45deg);
+	-webkit-transform: translate3d(0,0,0) rotate3d(1,1,1,45deg);
+	transform-origin:center top;
+	-webkit-transform-origin:center top;
+	opacity: 0;	
 }
-#nav4{
-	left: 70%;
+.toptip .toptip-content i{
+	transform: sacle3d(0,0,1) ;
+	-webkit-transform: sacle3d(0,0,1) ;
+	opacity: 0;
 }
-#nav5{
-	left: 80%;
+.toptip:hover .toptip-content{
+	opacity: 1;	
+	transform: translate3d(0,0,0) rotate3d(1,1,1,0deg);
+	-webkit-transform: translate3d(0,0,0) rotate3d(1,1,1,0deg);
+	transform-origin:center top;
+	-webkit-transform-origin:center top;
+	 transition: 0.6s all;
+	-webkit-transition: 0.6s all;
+	-o-transition: 0.6s all;
+	-moz-transition: 0.6s all;
+	-ms-transition: 0.6s all;
 }
-#nav6{
-	right: 100px;
+.toptip:hover .toptip-content i{
+	opacity: 1;
+	  transition: 0.3s all;
+	-webkit-transition: 0.3s all;
+	-o-transition: 0.3s all;
+	-moz-transition: 0.3s all;
+	-ms-transition: 0.3s all;
 }
+/*导航栏over*/
 /*幻灯片部分*/
 .slidebox{
 	background: pink;
@@ -88,16 +169,32 @@ nav a:hover{
 	height: 50%;
 	
 }
+/*幻灯片over*/
+/*公共样式*/
+.section{
+	border: 1px solid black;
+}
+/*公共样式over*/
+/*product*/
+.product{
+	background: red;
+}
+/*product over*/
 /*About*/
 .about{
 	background: pink;
-	height: 1000px;
 }
+/*about over*/
+/*store*/
+.store{
+	background: yellow;
+}
+/*store over*/
 /*Support*/
 .support{
 	background: blue;
-	height: 1000px;
 }
+/*support over*/
 /*back*/
 #back{
 	background: #fff;
