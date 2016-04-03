@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no" />  
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<title>123456</title>
+	<link href="css/css.css" rel="stylesheet" type="text/css" media="all" />	
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+
+</head>
+<body>
+	<div id="fullpage">
+		<!-- header -->
+		<div class="section section1">
+			<div class="header" id="header">
+				<!-- 导航栏部分 -->
+				<nav id="nav">
+					<ul >
+						<li><a href="#page2" class="toptip toptip-1">Product
+							<span class="toptip-content"><i class="fa fa-trophy fa-fw"></i></span>
+						</a></li>
+						<li><a href="#page3" class="toptip toptip-2">About
+							<span class="toptip-content"><i class="fa fa-users fa-fw"></i></span>
+						</a></li>
+						<li><a href="#page4" class="toptip toptip-3">Store
+							<span class="toptip-content"><i class="fa fa-gift fa-fw"></i></span>
+						</a></li>
+						<li><a href="#page5" class="toptip toptip-4">Support
+							<span class="toptip-content"><i class="fa fa-cogs fa-fw"></i></span>
+						</a></li>
+						<li><a href="" class="toptip toptip-5">Blog
+							<span class="toptip-content"><i class="fa fa-pencil-square-o fa-fw"></i></span>
+						</a></li>
+						<li><a href="" class="toptip toptip-6">English
+							<span class="toptip-content"><i class="fa fa-anchor fa-fw"></i></span>
+						</a></li>
+					</ul>
+					<!-- back -->
+					<div id="back"><a href="#page1"><img src="images/arrow1.png"></a></div>
+					<!-- back over -->
+				</nav>
+				<!-- 幻灯片部分 -->
+				<div id="logo">星辰<br>Studio</div>
+				<div class="slidebox">12345</div>
+			</div>
+		</div>
+		<!-- header Over -->
+		<!-- product -->
+		<div class="section product" id="product">
+			
+			<div class="slide">Slide1</div>
+			<div class="slide">Slide2</div>
+			<div class="slide">Slide3</div>
+			<div class="slide">Slide4</div>
+		</div>
+		<!-- product over -->
+		<!-- About -->
+		<div class="section about" id="about">
+			12345About
+	
+		</div>
+		<!-- About Over -->
+		<!-- store -->
+		<div class="section store" id="store">
+			12345store
+	
+		</div>
+		<!-- store over -->
+		<!-- Support -->
+		<div class="section support" id="support">
+			12345Support
+			
+		</div>
+		<!-- Support Over -->
+
+		<script type="text/javascript" src="js/basic.js"></script>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.js"></script>
+
+	<script type="text/javascript" src="js/easing.js"></script>
+		<!-- 激活fullpage -->
+	<script >
+	$(document).ready(function(){
+		$('#fullpage').fullpage({
+			anchors:['page1','page2','page3','page4','page5'],
+			fixedElements:'#nav',
+			navigation:'true',
+			navigationPosition:'right',
+			navigationColor:'#fff',
+			navigationTooltips:['Home','Product','About','Store','Support'],
+		});
+	});
+	</script>
+</body>
+</html>

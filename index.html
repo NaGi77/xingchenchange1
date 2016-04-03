@@ -2,99 +2,70 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no" />  
-	<meta http-equiv="X-UA-compatible" content="IE=edge">
-	<title>123456</title>
-	<link href="css/css.css" rel="stylesheet" type="text/css" media="all" />	
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
-
-</head>
-<body>
-	<div id="fullpage">
-		<!-- header -->
-		<div class="section header" id="header">
-			<!-- 导航栏部分 -->
-			<nav id="nav">
-				<ul >
-					<li><a href="#page2" class="toptip toptip-1">Product
-						<span class="toptip-content"><i class="fa fa-trophy fa-fw"></i></span>
-					</a></li>
-					<li><a href="#page3" class="toptip toptip-2">About
-						<span class="toptip-content"><i class="fa fa-users fa-fw"></i></span>
-					</a></li>
-					<li><a href="#page4" class="toptip toptip-3">Store
-						<span class="toptip-content"><i class="fa fa-gift fa-fw"></i></span>
-					</a></li>
-					<li><a href="#page5" class="toptip toptip-4">Support
-						<span class="toptip-content"><i class="fa fa-cogs fa-fw"></i></span>
-					</a></li>
-					<li><a href="" class="toptip toptip-5">Blog
-						<span class="toptip-content"><i class="fa fa-pencil-square-o fa-fw"></i></span>
-					</a></li>
-					<li><a href="" class="toptip toptip-6">English
-						<span class="toptip-content"><i class="fa fa-anchor fa-fw"></i></span>
-					</a></li>
-				</ul>
-				<!-- back -->
-				<div id="back"><a href="#page1"><img src="images/arrow1.png"></a></div>
-				<!-- back over -->
-			</nav>
-			<!-- 幻灯片部分 -->
-			<div id="logo">星辰<br>Studio</div>
-			<div class="slidebox">12345</div>
-		</div>
-		<!-- header Over -->
-		<!-- product -->
-		<div class="section product" id="product">
-			
-			<div class="slide">Slide1</div>
-			<div class="slide">Slide2</div>
-			<div class="slide">Slide3</div>
-			<div class="slide">Slide4</div>
-		</div>
-		<!-- product over -->
-		<!-- About -->
-		<div class="section about" id="about">
-			12345About
-	
-		</div>
-		<!-- About Over -->
-		<!-- store -->
-		<div class="section store" id="store">
-			12345store
-	
-		</div>
-		<!-- store over -->
-		<!-- Support -->
-		<div class="section support" id="support">
-			12345Support
-			
-		</div>
-		<!-- Support Over -->
-
-		<script type="text/javascript" src="js/basic.js"></script>
-	</div>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />  
+	<!--[if lt IE 9]>  
+　　　　<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>  
+<![endif]-->  
+	<title>网页Loading</title>
 
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.js"></script>
+	<style>
+		*{
+			background: #000;
+		}
+		.load-box{
+			position: absolute;
+			top: 40%;
+			left: 35%;
+		}
+		.proccess{
+			border-radius: 6px;
+			border:1px solid;
+			width:12px;
+			height:12px;
+			background:#ffffff;
+			margin:2px;
+		}
+	</style>
+	<script type="text/javascript">
 
-	<script type="text/javascript" src="js/easing.js"></script>
-		<!-- 激活fullpage -->
-	<script >
-	$(document).ready(function(){
-		$('#fullpage').fullpage({
-			anchors:['page1','page2','page3','page4','page5'],
-			paddingTop:'100px',
-			fixedElements:'#nav',
-			navigation:'true',
-			navigationPosition:'right',
-			navigationColor:'#fff',
-			navigationTooltips:['Home','Product','About','Store','Support'],
-		});
-	});
 	</script>
+</head>	
+<body  onLoad="location.href = url;" style='overflow:hidden;overflow-y:hidden'>
+	
+	<script language="JavaScript">
+		var url = "index1.html";
+	</script>
+
+	<div align=center>
+	<div align="center" class="load-box">
+	<form method=post name=proccess>
+		<script language=javascript>
+			for(i=0;i<20;i++)document.write("<input class=proccess>")
+		</script>
+	</form>
+	</div></td></tr></table>
+	<div align="center">
+		<script language=JavaScript>var p=0,j=0;
+			var c=new Array("#78D9E2","white")
+			setInterval('proccess();',100)
+			function proccess(){
+				document.forms.proccess.elements[p].style.background=c[j];
+				p+=1;
+				if(p==20){p=0;j=1-j;}}
+		</script>
+	</div>
+	</div>
+	<div align="center">
+		<script>
+			
+			if (document.layers)
+			document.write('<Layer src="' + url + ' " VISIBILITY="hide"> </Layer>');
+			else if (document.all || document.getElementById)
+			document.write('<iframe src="' + url + '" style="visibility: hidden;"></iframe>');
+			else location.href = url;
+	
+		</script>	
+	</div>
 </body>
 </html>
