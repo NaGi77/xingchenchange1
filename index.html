@@ -6,65 +6,66 @@
 	<!--[if lt IE 9]>  
 　　　　<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>  
 <![endif]-->  
-	<title>123456</title>
+	<title>网页Loading</title>
 
 
-	<!-- 自动探测屏幕宽度，然后加载相应的CSS文件 -->
-	<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 400px)" href="tinyScreen.css" />
-	<!-- 如果屏幕宽度小于400像素（max-device-width: 400px），就加载tinyScreen.css文件 -->
-	<link rel="stylesheet" type="text/css" media="screen and (min-width: 400px) and (max-device-width: 600px)" href="smallScreen.css" />
-	<style type="text/css">
-		/*在现有CSS文件中加载*/
-		@import url("tinyScreen.css") screen and (max-device-width: 400px);
-		/*如果屏幕宽度小于400像素，则column块取消浮动（float:none）、宽度自动调节（width:auto），sidebar块不显示（display:none）*/
-		@media screen and (max-device-width: 1000px) {
-			.column {
-			float: none;
-			width:auto;
-			}
-			 
-			.sidebar {
-			display:none;
-			}
+	<style>
+		*{
+			background: #000;
+		}
+		.load-box{
+			position: absolute;
+			top: 40%;
+			left: 35%;
+		}
+		.proccess{
+			border-radius: 6px;
+			border:1px solid;
+			width:12px;
+			height:12px;
+			background:#ffffff;
+			margin:2px;
 		}
 	</style>
+	<script type="text/javascript">
 
-	<link href="css/css.css" rel="stylesheet" type="text/css" media="all" />	
-
-</head>
-<body>
-	<!-- header -->
-	<div class="header" id="header">
-		<!-- 导航栏部分 -->
-		<nav>
-			<div id="logo">星辰<br>Studio</div>
-			<a href="" id="nav1">Product</a>
-			<a href="#about" id="nav2">About</a>
-			<a href="" id="nav3">Store</a>
-			<a href="#support" id="nav4">Support</a>
-			<a href="" id="nav5">Blog</a>
-			<a href="" id="nav6">English</a>
-		</nav>
-		<!-- 幻灯片部分 -->
-		<div class="slidebox">12345</div>
-	</div>
-	<!-- header Over -->
-	<!-- About -->
-	<div class="about">
-		12345About
-		<a name="about">111</a>
-	</div>
-	<!-- About Over -->
-	<!-- Support -->
-	<div class="support">
-		12345Support
-		<a name="support">111</a>
-	</div>
-	<!-- Support Over -->
-	<!-- back -->
-	<div id="back1" style="position:absolute;top:0;"></div>
-	<div id="back"><a href="#back1"><img src="images/arrow1.png"></a></div>
-	<!-- back over -->
+	</script>
+</head>	
+<body  onLoad="location.href = url;" style='overflow:hidden;overflow-y:hidden'>
 	
+	<script language="JavaScript">
+		var url = "index1.html";
+	</script>
+
+	<div align=center>
+	<div align="center" class="load-box">
+	<form method=post name=proccess>
+		<script language=javascript>
+			for(i=0;i<20;i++)document.write("<input class=proccess>")
+		</script>
+	</form>
+	</div></td></tr></table>
+	<div align="center">
+		<script language=JavaScript>var p=0,j=0;
+			var c=new Array("#78D9E2","white")
+			setInterval('proccess();',100)
+			function proccess(){
+				document.forms.proccess.elements[p].style.background=c[j];
+				p+=1;
+				if(p==20){p=0;j=1-j;}}
+		</script>
+	</div>
+	</div>
+	<div align="center">
+		<script>
+			
+			if (document.layers)
+			document.write('<Layer src="' + url + ' " VISIBILITY="hide"> </Layer>');
+			else if (document.all || document.getElementById)
+			document.write('<iframe src="' + url + '" style="visibility: hidden;"></iframe>');
+			else location.href = url;
+	
+		</script>	
+	</div>
 </body>
 </html>
