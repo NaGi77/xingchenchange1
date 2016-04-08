@@ -9,6 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
 
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/jquery.jqlouds.min.js"></script> 
+
 </head>
 <body>
 	<div id="fullpage">
@@ -42,8 +45,21 @@
 					<!-- back over -->
 				</nav>
 				<!-- 幻灯片部分 -->
-				<div id="logo">星辰<br>Studio</div>
-				<div class="slidebox">12345</div>
+				<div id="logo"><img src="images/logo.jpg"></div>
+				<div id="sky" style="height:500px; width:100%; padding-top:50px;">
+					<script>
+					jQuery(function($) {
+						 $('#sky').jQlouds({
+						  		wind: true		
+						});
+					});
+					</script>
+				</div>
+
+				<div class="slidebox">
+					<div id="xctext"><i>星</i><i>辰</i></div>
+					<div id="studio"><i id="s">S</i><i id="t">t</i><i id="u">u</i><i id="d">d</i><i id="i">i</i><i id="o">o</i></div>
+				</div>
 			</div>
 		</div>
 		<!-- header Over -->
@@ -107,15 +123,24 @@
 		</div>
 		<!-- product over -->
 		<!-- store -->
-		<div class="section store" id="store">
-			<h1>12345store 页面建设ing</h1>
-			<a href="https://item.taobao.com/item.htm?spm=a1z10.3-c.w4023-13433014136.2.fcVhrv&id=528265319057">购买地址</a>
+		<div class="section" id="store">
+			<div class="store">
+				<img src="images/img.jpg" class="storebg1">
+				<img src="images/img.png" class="storebg">
+				<div class="storedivbg" id="storedivbg">123</div>
+				<div class="storediv">
+					<img src="images/logo.png" class="storelogo">
+				</div>
+			<!-- <h1>12345store 页面建设ing</h1> -->
+			</div>
 		</div>
 		<!-- store over -->
 		<!-- Support -->
 		<div class="section support" id="support">
-			<h1>12345Support 页面建设ing</h1>
-			
+			<div>
+				<img src="img2.jpg">
+				<h1>12345Support 页面建设ing</h1>
+			</div>
 		</div>
 		<!-- Support Over -->
 
@@ -140,6 +165,25 @@
 			afterLoad:function(anchorLink,index){
 				switch(index){
 					case 1:
+						move('.slidebox #xctext')
+  						 .set('opacity', '1').duration(1000)
+ 						 .end();
+ 						move('.slidebox #studio')
+						  .translate(300, 0)
+						  .duration(500)
+						  .end(); 
+						move('#studio #s').y(-100).delay(500).duration(200).end();
+						setTimeout(function(){move('#studio #s').y(-50).duration(200).end();}, 900);
+						move('#studio #t').y(-100).delay(900).duration(200).end();
+						setTimeout(function(){move('#studio #t').y(-50).duration(200).end();}, 1400);
+						move('#studio #u').y(-100).delay(1400).duration(200).end();
+						setTimeout(function(){move('#studio #u').y(-50).duration(200).end();}, 1800);
+						move('#studio #d').y(-100).delay(1800).duration(200).end();
+						setTimeout(function(){move('#studio #d').y(-50).duration(200).end();}, 2200);
+						move('#studio #i').y(-100).delay(2200).duration(200).end();
+						setTimeout(function(){move('#studio #i').y(-50).duration(200).end();}, 2600);
+						move('#studio #o').y(-100).delay(2600).duration(200).end();
+						setTimeout(function(){move('#studio #o').y(-50).duration(200).end();}, 3000);			
 						break;
 					case 2:
 						move("#h1").set('opacity', '1').duration(1000).end();
@@ -179,6 +223,7 @@
 					case 3:
 						break;
 					case 4:
+						move("#storedivbg").set('opacity', '0.7').duration(1000).end();
 						break;
 					default:
 						break;
