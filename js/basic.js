@@ -16,6 +16,10 @@ window.onresize = heightchange;*/
 function getHeight() { 
 	document.getElementById("textabout").style.height= document.getElementById("imgabout").clientHeight+"px";
 	document.getElementById("navbg").style.height= document.getElementById("nav").clientHeight+10+"px";
+	document.getElementById("navbg2").style.height= document.getElementById("nav").clientHeight+20+"px";
+	document.getElementById("navbg3").style.height= document.getElementById("nav").clientHeight+20+"px";
+	document.getElementById("navbg4").style.height= document.getElementById("nav").clientHeight+20+"px";
+	document.getElementById("navbg5").style.height= document.getElementById("nav").clientHeight+20+"px";
 }
 window.onload = function() {
 	getHeight();
