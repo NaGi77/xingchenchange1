@@ -4,13 +4,47 @@
 	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no" />  
 	<meta http-equiv="X-UA-compatible" content="IE=edge">
-	<title>123456</title>
+	<title>welcome to 星辰Studio</title>
 	<link href="css/css.css" rel="stylesheet" type="text/css" media="all" />	
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
-
+	<link href="images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
 	<script src="js/jquery.jqlouds.min.js"></script> 
+
+	<script type="text/javascript">
+		function change(){
+			var val=document.getElementById('change').innerHTML;
+
+		if (val=='English') {
+			var pro=document.getElementById('pro').innerHTML;
+			document.getElementById('pro').innerHTML="产品";
+			var sto=document.getElementById('sto').innerHTML;
+			document.getElementById('sto').innerHTML="商店";
+			var sup=document.getElementById('sup').innerHTML;
+			document.getElementById('sup').innerHTML="参数";
+			var abo=document.getElementById('abo').innerHTML;
+			document.getElementById('abo').innerHTML="有关我们";
+			var blo=document.getElementById('blo').innerHTML;
+			document.getElementById('blo').innerHTML="动态";
+			document.getElementById('change').innerHTML='中文';
+		}
+		else if (val=='中文') {
+		var pro=document.getElementById('pro').innerHTML;
+		document.getElementById('pro').innerHTML="Product";
+		var sto=document.getElementById('sto').innerHTML;
+		document.getElementById('sto').innerHTML="Store";
+		var sup=document.getElementById('sup').innerHTML;
+		document.getElementById('sup').innerHTML="Support";
+		var abo=document.getElementById('abo').innerHTML;
+		document.getElementById('abo').innerHTML="About";
+		var blo=document.getElementById('blo').innerHTML;
+		document.getElementById('blo').innerHTML="Blog";
+		document.getElementById('change').innerHTML='English';
+		}
+		
+	}
+</script>
 
 </head>
 <body>
@@ -21,22 +55,22 @@
 				<!-- 导航栏部分 -->
 				<nav id="nav">
 					<ul >
-						<li><a href="#page2" class="toptip toptip-1">About
+						<li><a href="#page2" class="toptip toptip-1"><div id="abo" >About</div>
 							<span class="toptip-content"><i class="fa fa-users fa-fw"></i></span>
 						</a></li>
-						<li><a href="#page3" class="toptip toptip-2">Product
+						<li><a href="#page3" class="toptip toptip-2"><div id="pro">Product</div>
 							<span class="toptip-content"><i class="fa fa-trophy fa-fw"></i></span>
 						</a></li>
-						<li><a href="#page4" class="toptip toptip-3">Store
+						<li><a href="#page4" class="toptip toptip-3"><div id="sto">Store</div>
 							<span class="toptip-content"><i class="fa fa-gift fa-fw"></i></span>
 						</a></li>
-						<li><a href="#page5" class="toptip toptip-4">Support
+						<li><a href="#page5" class="toptip toptip-4"><div id="sup">Support</div>
 							<span class="toptip-content"><i class="fa fa-cogs fa-fw"></i></span>
 						</a></li>
-						<li><a href="" class="toptip toptip-5">Blog
+						<li><a href="" class="toptip toptip-5"><div id="blo">Blog</div>
 							<span class="toptip-content"><i class="fa fa-pencil-square-o fa-fw"></i></span>
 						</a></li>
-						<li><a href="" class="toptip toptip-6">English
+						<li><a href="javascript:change();" class="toptip toptip-6" ><div id="change">English</div>
 							<span class="toptip-content"><i class="fa fa-anchor fa-fw"></i></span>
 						</a></li>
 					</ul>
